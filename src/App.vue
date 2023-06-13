@@ -12,7 +12,6 @@ export default {
 </script>
 
 <template>
-  <h1 class="text-danger">ciaone</h1>
   <SiteHeader></SiteHeader>
   <SiteMain></SiteMain>
   <SiteFooter></SiteFooter>
