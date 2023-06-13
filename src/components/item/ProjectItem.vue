@@ -28,7 +28,7 @@ export default {
 
 .card {
     position: relative;
-    aspect-ratio: 0.66;
+    aspect-ratio: 1.33;
 
     .card-img {
         position: relative;
