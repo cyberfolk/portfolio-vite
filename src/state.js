@@ -24,6 +24,10 @@ export const state = reactive({
             })
     },
 
+    completePath(project) {
+        return this.API_URL_BASE + 'storage/' + project.link_cover
+    },
+
     getProject(slug) {
         const url = this.API_URL_BASE + this.API_URL_PROJECTS + "/" + slug;
         axios
