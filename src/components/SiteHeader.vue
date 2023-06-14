@@ -6,8 +6,12 @@ export default {
 </script>
 
 <template>
-  <header id="app_header" class="text-center pt-5 pb-4">
-    <h1 class="text-center text-warning"> BOOLFOLIO </h1>
+  <header id="app_header">
+    <nav class="nav justify-content-center bg-dark shadow ">
+      <router-link class="nav-link" :to="{ 'name': 'home' }" aria-current="page">Home</router-link>
+      <router-link class="nav-link" :to="{ 'name': 'about' }" aria-current="page">About</router-link>
+      <router-link class="nav-link" :to="{ 'name': 'contacts' }" aria-current="page">Contacts</router-link>
+    </nav>
   </header>
   <!-- /#app_header -->
 </template>
