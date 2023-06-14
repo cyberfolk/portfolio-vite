@@ -15,7 +15,7 @@ export const state = reactive({
         axios
             .get(url)
             .then(response => {
-                this.projects = response.data.projects;
+                this.projects = response.data.projects.data;
                 this.loadingProjects = false;
                 console.log(this.projects);
             })
