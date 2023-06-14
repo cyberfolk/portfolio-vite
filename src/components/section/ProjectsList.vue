@@ -3,7 +3,7 @@ import { state } from "../../state";
 import ProjectItem from "../item/ProjectItem.vue";
 export default {
     name: "ProjectsList",
-    components: { ProjectItem, PaginationProjects },
+    components: { ProjectItem },
     data() {
         return { state, };
     },
