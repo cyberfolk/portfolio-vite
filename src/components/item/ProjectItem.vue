@@ -17,6 +17,7 @@ export default {
             <!-- /.ms_title -->
             <p class="card-text ms_description">{{ description }}</p>
             <!-- /.ms_description -->
+            <!-- <router-link class="nav-link" :to="{ name: 'single-project', param: { 'slug': post.slug } }">Read More</router-link> -->
         </div>
         <!-- /.body -->
     </div>
