@@ -7,6 +7,7 @@ import NotFound from "./views/NotFound.vue";
 import ProjectsView from "./views/ProjectsView.vue";
 const router = createRouter({
     history: createWebHistory(),
+    linkExactActiveClass: "active",
     routes: [
         {
             path: '/projects',

@@ -10,7 +10,7 @@ export default {
 
     <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark shadow px-5">
       <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
-        <img height="40" src="./../assets/image/cyberfolk-logo.png" alt="Personal Logo">
+        <img height="35" src="./../assets/image/cyberfolk-logo.png" alt="Personal Logo" class="pt-1">
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -19,12 +19,12 @@ export default {
       </button>
       <!-- navbar-toggler -->
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item"><router-link class="nav-link text-white" :to="{ 'name': 'home' }" aria-current="page">Home</router-link></li>
-          <li class="nav-item"><router-link class="nav-link text-white" :to="{ 'name': 'contacts' }" aria-current="page">Contacts</router-link></li>
-          <li class="nav-item"><router-link class="nav-link text-white" :to="{ 'name': 'projects' }" aria-current="page">Projects</router-link></li>
-          <li class="nav-item"><router-link class="nav-link text-white" :to="{ 'name': 'about' }" aria-current="page">About</router-link></li>
+      <div class="ps-5 collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav gap-2">
+          <li class="nav-item"><router-link class="nav-link text-white" active-class="active" :to="{ 'name': 'home' }" aria-current="page">Home</router-link></li>
+          <li class="nav-item"><router-link class="nav-link text-white" active-class="active" :to="{ 'name': 'contacts' }" aria-current="page">Contacts</router-link></li>
+          <li class="nav-item"><router-link class="nav-link text-white" active-class="active" :to="{ 'name': 'projects' }" aria-current="page">Projects</router-link></li>
+          <li class="nav-item"><router-link class="nav-link text-white" active-class="active" :to="{ 'name': 'about' }" aria-current="page">About</router-link></li>
         </ul>
       </div>
       <!-- navbar-collapse -->
@@ -34,5 +34,16 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/scss/app.scss';
+@use '../assets/scss/partials/variables' as *;
+
+.nav-link:hover {
+  color: $primary !important;
+}
+
+.active {
+  transform: rotate(-2deg);
+  color: $primary !important;
+  font-size: larger;
+  font-family: 'Skratch Punk', sans-serif;
+}
 </style>
