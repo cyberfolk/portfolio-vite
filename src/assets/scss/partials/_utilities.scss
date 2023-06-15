@@ -1,1 +1,7 @@
 @use "./variables" as *;
+
+.f_skratch {
+  transform: rotate(-2deg);
+  color: $primary !important;
+  font-family: "Skratch Punk", sans-serif;
+}

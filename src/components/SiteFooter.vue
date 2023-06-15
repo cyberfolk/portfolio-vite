@@ -6,14 +6,32 @@ export default {
 </script>
 
 <template>
-  <footer id="app_footer" class="text-center py-3 bg-secondary">
-    <div class="container">
-      <span class="text-center text-light"> Made with love &copy; powered by cyberfolk</span>
-    </div>
+  <footer id="app_footer" class="d-flex flex-wrap justify-content-between align-items-center p-5 py-3 bg-dark">
+    <div class="align-items-center text-light"> Andrea Ferrari | Boolean 2023 | &copy; powered by cyberfolk</div>
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex align-content-center gap-4">
+      <li>
+        <a href="https://t.me/Remigio377">
+          <font-awesome-icon icon="fa-brands fa-telegram" size="lg" />
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/cyberfolk">
+          <font-awesome-icon icon="fa-brands fa-github-alt" size="xl" />
+        </a>
+      </li>
+    </ul>
   </footer>
   <!-- /#app_footer -->
 </template>
 
 <style lang="scss" scoped>
 @use '../assets/scss/partials/variables' as *;
+
+.a:hover {
+  color: $primary !important;
+}
+
+.a {
+  font-size: larger;
+}
 </style>
