@@ -32,7 +32,6 @@ export const state = reactive({
 
     getProject(endUrl) {
         const url = this.API_URL_BASE + this.API_PROJECT + endUrl
-        console.log(router);
         axios
             .get(url)
             .then(response => {
@@ -40,11 +39,10 @@ export const state = reactive({
                     this.project = response.data.result;
                     this.loading_project = false;
                 } else {
-                    console.log('success false');
-                    console.log(router.path);
                     router.push({
                         name: 'NotFound',
                         // preserve current path and remove the first char to avoid the target URL starting with `//`
+                        params: { pathMatch: "router.path.substring(1).split('/')" },
                     })
                 }
             })
