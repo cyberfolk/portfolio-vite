@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "PageNotFound",
+    name: "NotFound",
 }
 </script>
 
@@ -8,7 +8,7 @@ export default {
     <div class="container text-center">
         <h1>404</h1>
         <span>Project not found</span>
-        <router-link :to="{ 'name': 'projects' }" class="d-block">&LeftArrow; Go back to projects</router-link>
+        <router-link :to="{ 'name': 'home' }" class="d-block">&LeftArrow; Go back to projects</router-link>
     </div>
 </template>
 
