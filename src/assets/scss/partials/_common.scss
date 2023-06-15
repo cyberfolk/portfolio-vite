@@ -1,5 +1,7 @@
 @use "./variables" as *;
 
 body {
-  background-color: $light;
+  background-image: url("../image/bg3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
