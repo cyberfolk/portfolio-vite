@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-    <section id="projects_list">
+    <section id="projects_list" class="mb-5 py-3">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
             <div class="col" v-for="p in state.projects">
                 <ProjectItem
