@@ -7,7 +7,7 @@ export default {
 <template>
     <div id="view_404">
         <div class="container text-center">
-            <h1 class="my-5">404</h1>
+            <h1 class="text-light text-center align-middle py-5 position-fixed start-50 top-50 translate-middle">404 | NOT FOUND</h1>
             <span>Project not found</span>
             <router-link :to="{ 'name': 'home' }" class="d-block">&LeftArrow; Go back to projects</router-link>
         </div>
@@ -18,5 +18,5 @@ export default {
 
 
 <style lang="scss" scoped>
-@use '../assets/scss/app.scss';
+@use '../assets/scss/partials/variables' as *;
 </style>
