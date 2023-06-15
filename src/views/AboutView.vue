@@ -11,7 +11,7 @@ export default {
             <h1 class="my-5 f_skratch">About View</h1>
             <div class="row mb-5 py-3 g-5">
                 <div class="col-6">
-                    <div class="pe-5">
+                    <div class="pe-5 text-light">
                         <h1 class="mb-2">Hello choom.</h1>
                         <h1 class="mb-4">My name is Andrea Ferrari.</h1>
                         <p class="fs-3 mb-2">I'm glad you got here. Thank you.</p>
@@ -21,7 +21,7 @@ export default {
                     </div>
                 </div>
                 <div class="col-6">
-                    <img class="w-100" src="../assets/image/about.gif" alt="">
+                    <img class="w-100 rounded shadow" src="../assets/image/about.gif" alt="">
                 </div>
             </div>
             <!-- /.row -->
