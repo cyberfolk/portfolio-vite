@@ -13,11 +13,14 @@ export default {
 </script>
 
 <template>
-    <div class="container" v-if="state.project">
-        <h1>{{ state.project.title }}</h1>
-        <h3>SingleProject View</h3>
-        {{ this.$route.params.slug }}
+    <div id="view_project">
+        <div class="container" v-if="state.project">
+            <h1 class="my-5">{{ state.project.title }}</h1>
+            <h3>SingleProject View</h3>
+        </div>
+        <!-- /.container -->
     </div>
+    <!-- /#view_project -->
 </template> 
 
 <style lang="scss" scoped>

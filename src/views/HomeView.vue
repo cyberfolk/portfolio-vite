@@ -1,10 +1,6 @@
 <script>
-import ProjectsList from "./../components/section/ProjectsList.vue";
 export default {
     name: "HomeView",
-    components: {
-        ProjectsList,
-    }
 };
 
 </script>
@@ -13,7 +9,6 @@ export default {
     <div id="view_home">
         <div class="container">
             <h1 class="my-5">Home View</h1>
-            <ProjectsList />
         </div>
         <!-- /.container -->
     </div>
