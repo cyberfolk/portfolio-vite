@@ -8,7 +8,7 @@ export default {
         return { state, };
     },
     mounted() {
-        state.fetchProjects(state.API_URL_BASE + state.API_URL_PROJECTS + state.currentPage);
+        state.fetchProjects(state.API_URL_BASE + state.API_PAGINATION + state.currentPage);
     },
 };
 </script>
