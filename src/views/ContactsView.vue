@@ -8,7 +8,7 @@ export default {
 <template>
     <div id="contacts_view">
         <div class="container">
-            <h1 class="my-5">Contacts View</h1>
+            <h1 class="my-5 f_skratch">Contacts View</h1>
         </div>
         <!-- /.container -->
     </div>

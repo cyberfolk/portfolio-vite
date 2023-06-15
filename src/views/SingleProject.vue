@@ -15,7 +15,7 @@ export default {
 <template>
     <div id="view_project">
         <div class="container" v-if="state.project">
-            <h1 class="my-5">{{ state.project.title }}</h1>
+            <h1 class="my-5 f_skratch">{{ state.project.title }}</h1>
             <h3>SingleProject View</h3>
         </div>
         <!-- /.container -->
