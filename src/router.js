@@ -2,29 +2,36 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "./views/HomeView.vue"
 import AboutView from "./views/AboutView.vue"
 import ContactsView from "./views/ContactsView.vue"
-import SingleProjectView from "./views/SingleProjectView.vue"
+import SingleProject from "./views/SingleProject.vue"
+import PageNotFound from "./views/PageNotFound.vue";
 const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            'path': '/',
-            'name': 'home',
-            'component': HomeView
+            path: '/',
+            name: 'home',
+            component: HomeView
         },
         {
-            'path': '/repo/:slug',
-            'name': 'single-project',
-            'component': SingleProjectView
+            path: '/projects/:slug',
+            name: 'single-project',
+            component: SingleProject
         },
         {
-            'path': '/about',
-            'name': 'about',
-            'component': AboutView
-        }, {
-            'path': '/contacts',
-            'name': 'contacts',
-            'component': ContactsView
-        }
+            path: '/about',
+            name: 'about',
+            component: AboutView
+        },
+        {
+            path: '/contacts',
+            name: 'contacts',
+            component: ContactsView
+        },
+        {
+            path: '/:pathMatch(.*)*',
+            name: 'page404',
+            component: PageNotFound
+        },
     ]
 })
 export { router }
