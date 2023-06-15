@@ -5,7 +5,7 @@ export default {
         title: String,
         cover: String,
         description: String,
-        type: String,
+        type: Object,
         slug: String,
     },
     methods: {
@@ -23,7 +23,7 @@ export default {
 <template>
     <div class="card position-relative">
         <img v-if="cover" :src="cover" class="card-img-top" :alt="title" />
-        <div class="badge position-absolute top-0 end-0 mt-1 me-1" :class="getBG(type.name)">{{ type.name }}</div>
+        <div v-if="type" class="badge position-absolute top-0 end-0 mt-1 me-1" :class="getBG(type.name)">{{ type.name }}</div>
         <div class="card-body">
             <h5 class="card-title">{{ title }}</h5>
             <p class="card-text">{{ description.slice(0, 150) + '...' }}</p>
@@ -48,7 +48,7 @@ export default {
     }
 
     .card-body {
-        height: 400px;
+        height: 200px;
     }
 }
 </style>
