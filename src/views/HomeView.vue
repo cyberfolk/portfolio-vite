@@ -1,29 +1,55 @@
 <script>
+import home from "./../assets/data/home.json";
+import JumbotroSection from "./../components/section/JumbotronSection.vue";
 export default {
     name: "HomeView",
+    components: { JumbotroSection },
+    data() {
+        return {
+            activeImage: 0,
+            home: home,
+            autoPlay: null,
+        };
+    },
+    methods: {
+        next() {
+            this.activeImage++;
+            if (this.activeImage == this.home.length) {
+                this.activeImage = 0;
+            }
+        },
+        prev() {
+            this.activeImage--;
+            if (this.activeImage < 0) {
+                this.activeImage = this.home.length - 1;
+            }
+        },
+        play() {
+            this.autoPlay = setInterval(this.next, 3000);
+        },
+        stop() {
+            this.autoPlay = clearInterval(this.autoPlay);
+        },
+    },
+    mounted() { this.play() }
 };
-
 </script>
 
 <template>
-    <div id="view_home">
-        <section id="jumbotron" class="text-center pb-3 bg-primary">
-            <div class="d-flex justify-content-center align-items-center lh-1 font-monospace">
-                <div class="rotate_2 text_darkless" style="font-size: 150px;">&#60; </div>
-                <div class="">
-                    <h1 class="rotate_2"><span class="f_skratch text_darkless">Ciao!</span> Sono Andrea, e</h1>
-                    <h1 class="rotate_2">sono un Web<span class="f_skratch text_darkless"> Developer</span></h1>
-                </div>
-                <div class="rotate_2 text_darkless pb-5" style="font-size: 150px;">/&#62; </div>
+    <JumbotroSection :page="'home'"></JumbotroSection>
+    <section id="home_view">
+        <div id="slider" class="d-flex">
+            <button class="ms_arrow" style="width: 10%;" @click="prev()">&lsaquo;</button>
+            <div class=" text-center" style="width: 80%;" @mouseover="stop()" @mouseleave="play()">
+                <h5 class=" m-4">{{ home[activeImage].name }}</h5>
+                <p class="pb-4">{{ home[activeImage].text }}</p>
             </div>
-
-        </section>
-        <div class="container">
-
+            <!-- /.content -->
+            <button class="ms_arrow" style="width: 10%;" @click="next()">&rsaquo;</button>
         </div>
-        <!-- /.container -->
-    </div>
-    <!-- /#view_home -->
+        <!-- /.slider -->
+    </section>
+    <!-- /#home_view -->
 </template>
 
 <style lang="scss" scoped>
