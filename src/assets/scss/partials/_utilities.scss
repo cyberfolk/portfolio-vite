@@ -7,5 +7,9 @@
 }
 
 .bg_darkless {
-  background: $darkless;
+  background: $darkless !important;
+}
+
+.my_shadow {
+  box-shadow: 0 0.5rem 1rem rgba(white, 0.3);
 }

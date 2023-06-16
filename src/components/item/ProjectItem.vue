@@ -30,22 +30,18 @@ export default {
             <div v-if="technologies">
                 <span v-for="t in technologies" class="badge bg_darkless me-1">{{ t.name }}</span>
             </div>
-            <p class="card-text px-1 mt-1 d-none">{{ description.slice(0, 150) + '...' }}</p>
+            <p class="card-text px-1 mt-1 d-none">
+                {{ description.slice(0, 150) + '...' }}
+                <router-link class="nav-link d-inline text-primary fw-bold" :to="{ name: 'single-project', params: { slug: slug } }">Read More</router-link>
+            </p>
         </div>
         <!-- /.body -->
-        <!--         <div class="card-footer text-primary text-center">
-            <router-link class="nav-link" :to="{ name: 'single-project', params: { slug: slug } }">Read More</router-link>
-        </div> -->
     </div>
     <!-- /.card -->
 </template>
 
 <style lang="scss" scoped>
 @use '../../assets/scss/partials/variables' as *;
-
-.my_shadow {
-    box-shadow: 0 .5rem 1rem rgba(white, .30);
-}
 
 .card {
     aspect-ratio: 1.33;
@@ -54,8 +50,6 @@ export default {
         height: 100%;
         object-fit: cover;
     }
-
-
 }
 
 .card:hover .card-img {
