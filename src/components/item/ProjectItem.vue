@@ -6,6 +6,7 @@ export default {
         cover: String,
         description: String,
         type: Object,
+        technologies: Array,
         slug: String,
     },
     methods: {
@@ -21,17 +22,20 @@ export default {
 };
 </script>
 <template>
-    <div class="card position-relative">
-        <img v-if="cover" :src="cover" class="card-img-top" :alt="title" />
-        <div v-if="type" class="badge position-absolute top-0 end-0 mt-1 me-1" :class="getBG(type.name)">{{ type.name }}</div>
-        <div class="card-body">
-            <h5 class="card-title">{{ title }}</h5>
-            <p class="card-text">{{ description.slice(0, 150) + '...' }}</p>
+    <div class="card position-relative border-0 my_shadow">
+        <img v-if="cover" :src="cover" class="card-img" :alt="title" />
+        <div v-if="type" class="badge position-absolute top-0 end-0 mt-2 me-2" :class="getBG(type.name)">{{ type.name }}</div>
+        <h3 class="card-title position-absolute text-center w-100 mt-4">{{ title }}</h3>
+        <div class="card-body position-absolute bottom-0">
+            <div v-if="technologies">
+                <span v-for="t in technologies" class="badge bg_darkless me-1">{{ t.name }}</span>
+            </div>
+            <p class="card-text px-1 mt-1 d-none">{{ description.slice(0, 150) + '...' }}</p>
         </div>
         <!-- /.body -->
-        <div class="card-footer text-primary text-center">
+        <!--         <div class="card-footer text-primary text-center">
             <router-link class="nav-link" :to="{ name: 'single-project', params: { slug: slug } }">Read More</router-link>
-        </div>
+        </div> -->
     </div>
     <!-- /.card -->
 </template>
@@ -39,6 +43,9 @@ export default {
 <style lang="scss" scoped>
 @use '../../assets/scss/partials/variables' as *;
 
+.my_shadow {
+    box-shadow: 0 .5rem 1rem rgba(white, .30);
+}
 
 .card {
     aspect-ratio: 1.33;
@@ -48,8 +55,14 @@ export default {
         object-fit: cover;
     }
 
-    .card-body {
-        height: 200px;
-    }
+
+}
+
+.card:hover .card-img {
+    filter: brightness(0.8);
+}
+
+.card:hover .card-text {
+    display: block !important;
 }
 </style>

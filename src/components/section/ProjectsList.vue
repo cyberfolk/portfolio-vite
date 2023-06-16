@@ -22,6 +22,7 @@ export default {
                     :cover="state.completePath(p)"
                     :description="p.description"
                     :type="p.type"
+                    :technologies="p.technologies"
                     :slug="p.slug" />
             </div>
             <!-- /.col -->
