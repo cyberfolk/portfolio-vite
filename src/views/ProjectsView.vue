@@ -12,7 +12,7 @@ export default {
 <template>
     <div id="view_project">
         <div class="container my-5">
-            <h1 class="my-5 f_skratch">Pojects</h1>
+            <h1 class="my-5 f_skratch">Projects</h1>
             <ProjectsList />
         </div>
         <!-- /.container -->
