@@ -25,7 +25,6 @@ export default {
     right: 0;
     height: 100vh; // I can't fix in other way
     margin: auto;
-    overflow-y: hidden;
 }
 
 .line {

@@ -18,13 +18,9 @@ export default {
     <section id="jumbotron" class="text-center pb-3 bg-primary">
         <div class="d-flex justify-content-center align-items-center lh-1 font-monospace pt-3">
             <div class="rotate_2 text_darkless" style="font-size: 150px;">&#60; </div>
-            <div class="rotate_2">
-                <h1> <span class='f_skratch text_darkless'> {{ jumbotron[this.page].dark1 }} </span>
-                    {{ jumbotron[this.page].light1 }}
-                </h1>
-                <h1>
-                    {{ jumbotron[this.page].light2 }}
-                    <span class='f_skratch text_darkless'> {{ jumbotron[this.page].dark2 }} </span>
+            <div>
+                <h1 class="rotate_2"> <span class='f_skratch text_darkless'> {{ jumbotron[this.page].dark1 }} </span> {{ jumbotron[this.page].light1 }} </h1>
+                <h1 class="rotate_2"> {{ jumbotron[this.page].light2 }} <span class='f_skratch text_darkless'> {{ jumbotron[this.page].dark2 }} </span>
                 </h1>
             </div>
             <div class="rotate_2 text_darkless pb-5" style="font-size: 150px;">/&#62; </div>
