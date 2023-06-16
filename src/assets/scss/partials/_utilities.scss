@@ -1,5 +1,11 @@
 @use "./variables" as *;
 
+.text_impact {
+  font-family: "Skratch Punk", sans-serif;
+  transform: rotate(-2deg);
+  color: $primary;
+}
+
 .f_skratch {
   font-family: "Skratch Punk", sans-serif;
 }

@@ -11,7 +11,8 @@ export default {
     <JumbotroSection :page="'contacts'"></JumbotroSection>
     <section id="contacts_view">
         <div class="container my-5">
-            <h1 class="my-5 f_skratch">Contacts View</h1>
+            <h1 class="my-5 text_impact
+">Contacts View</h1>
             <form class="mb-5 py-3">
                 <div class="mb-5">
                     <label for="name" class="form-label">Name</label>

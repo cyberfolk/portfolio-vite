@@ -15,7 +15,8 @@ export default {
     <JumbotroSection :page="'projects'"></JumbotroSection>
     <section id="project_view">
         <div class="container my-5">
-            <h1 class="my-5 f_skratch rotate_2">Projects</h1>
+            <h1 class="my-5 text_impact
+">Projects</h1>
             <ProjectsList />
         </div>
         <!-- /.container -->
