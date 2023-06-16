@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-    <section id="view_project">
+    <section id="view_single_project">
         <div class="container my-5" v-if="state.project">
             <h1 class="my-5 f_skratch">Project</h1>
             <h1 class="align-self-center">{{ $route.params.slug }}</h1>
@@ -47,7 +47,7 @@ export default {
         </div>
         <!-- /.container -->
     </section>
-    <!-- /#view_project -->
+    <!-- /#view_single_project -->
 </template> 
 
 <style lang="scss" scoped>

@@ -1,14 +1,19 @@
 <script>
+import JumbotroSection from "./../components/section/JumbotronSection.vue";
 export default {
     name: "AboutView",
+    components: {
+        JumbotroSection,
+    }
 };
 
 </script>
 
 <template>
-    <div id="about_view">
-        <div class="container">
-            <h1 class="my-5 f_skratch">About View</h1>
+    <JumbotroSection :page="'about'"></JumbotroSection>
+    <section id="about_view">
+        <div class="container my-5">
+            <h1 class="my-5 f_skratch rotate_2">About</h1>
             <div class="row mb-5 py-3 g-5">
                 <div class="col-6">
                     <div class="pe-5">
@@ -27,7 +32,7 @@ export default {
             <!-- /.row -->
         </div>
         <!-- /.container -->
-    </div>
+    </section>
     <!-- /#about_view -->
 </template>
 

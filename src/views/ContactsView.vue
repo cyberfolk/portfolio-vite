@@ -1,12 +1,15 @@
 <script>
+import JumbotroSection from "./../components/section/JumbotronSection.vue";
 export default {
     name: "ContactsView",
+    components: { JumbotroSection },
 };
 
 </script>
 
 <template>
-    <div id="contacts_view">
+    <JumbotroSection :page="'contacts'"></JumbotroSection>
+    <section id="contacts_view">
         <div class="container my-5">
             <h1 class="my-5 f_skratch">Contacts View</h1>
             <form class="mb-5 py-3">
@@ -40,7 +43,7 @@ export default {
             </form>
         </div>
         <!-- /.container -->
-    </div>
+    </section>
     <!-- /#contacts_view -->
 </template>
 

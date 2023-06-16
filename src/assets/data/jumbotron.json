@@ -1,0 +1,26 @@
+{
+  "about": {
+    "dark1": "Due cose",
+    "light1": " in più su di me",
+    "light2": "per conoscermi",
+    "dark2": " meglio"
+  },
+  "contacts": {
+    "dark1": "Contattami",
+    "light1": " per curiosità,",
+    "light2": "domande o per",
+    "dark2": " collaborare"
+  },
+  "home": {
+    "dark1": "Ciao!",
+    "light1": " Sono Andrea, e",
+    "light2": "sono un Web",
+    "dark2": " Developer"
+  },
+  "projects": {
+    "dark1": "Progetti:",
+    "light1": " la mia raccolta, dacci",
+    "light2": "un occhio e poi dimmi che ne",
+    "dark2": "pensi"
+  }
+}
