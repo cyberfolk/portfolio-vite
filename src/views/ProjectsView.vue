@@ -1,23 +1,26 @@
 <script>
+import JumbotroSection from "./../components/section/JumbotronSection.vue";
 import ProjectsList from "./../components/section/ProjectsList.vue";
 export default {
     name: "ProjectView",
     components: {
         ProjectsList,
+        JumbotroSection,
     }
 };
 
 </script>
 
 <template>
-    <div id="view_project">
+    <JumbotroSection :page="'projects'"></JumbotroSection>
+    <section id="project_view">
         <div class="container my-5">
-            <h1 class="my-5 f_skratch">Projects</h1>
+            <h1 class="my-5 f_skratch rotate_2">Projects</h1>
             <ProjectsList />
         </div>
         <!-- /.container -->
-    </div>
-    <!-- /#view_project -->
+    </section>
+    <!-- /#project_view -->
 </template>
 
 <style lang="scss" scoped>
