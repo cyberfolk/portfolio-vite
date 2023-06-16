@@ -1,13 +1,18 @@
 @use "./variables" as *;
 
 .f_skratch {
-  transform: rotate(-2deg);
-  color: $primary !important;
   font-family: "Skratch Punk", sans-serif;
+}
+
+.rotate_2 {
+  transform: rotate(-2deg);
 }
 
 .bg_darkless {
   background: $darkless !important;
+}
+.text_darkless {
+  color: $darkless !important;
 }
 
 .my_shadow {
