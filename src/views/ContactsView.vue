@@ -35,8 +35,8 @@ export default {
                     <textarea class="form-control rounded" name="message" id="message" rows="8"></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary me-2">Send</button>
-                <button type="reset" class="btn btn-warning">Reset</button>
+                <button type="submit" class="btn btn-primary text-white me-2">Send</button>
+                <button type="reset" class="btn btn-warning text-white">Reset</button>
             </form>
         </div>
         <!-- /.container -->
