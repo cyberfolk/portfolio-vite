@@ -1,0 +1,17 @@
+[
+  {
+    "path": "./src/assets/img/section/testimonials/01.png",
+    "name": "Cynthia Clark",
+    "text": "Lorem dolor sit amet, adipisicing elit. Est provident, officiis voluptatum consectetur reprehenderit aliquam voluptate beatae porro qui adipisci provident.!"
+  },
+  {
+    "path": "./src/assets/img/section/testimonials/02.png",
+    "name": "Amanda Leer",
+    "text": "Lorem distinctio dolor sit consectetur amet, reprehenderit adipisicing adipisci elit. Est, voluptatum distinctio reprehenderit aliquam voluptate beatae porro adipisc!"
+  },
+  {
+    "path": "./src/assets/img/section/testimonials/03.png",
+    "name": "Rob Stark",
+    "text": "Lorem ipsum dolor sit amet, qui consectetur adipisicing elit. Est, ipsum officiis officiis voluptatum distinctio aliquam voluptate beatae porro ipsum qui provident.!"
+  }
+]
