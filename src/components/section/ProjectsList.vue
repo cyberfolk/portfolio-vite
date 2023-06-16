@@ -31,8 +31,8 @@ export default {
 
         <nav class="my-5 text-center">
             <ul class="pagination justify-content-center">
-                <li class="page-item" v-for="link in  state.links" :class="link.active ? 'active' : ''" @click="state.fetchProjects(link.url)">
-                    <a class="page-link" href="#" v-html="link.label"></a>
+                <li class="page-item shadow" v-for="link in  state.links" :class="link.active ? 'active' : ''" @click="state.fetchProjects(link.url)">
+                    <a class="page-link bg-dark border-0" href="#" v-html="link.label"></a>
                 </li>
             </ul>
         </nav>
