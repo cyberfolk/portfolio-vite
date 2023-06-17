@@ -22,6 +22,7 @@ export default {
             <div class="rotate_2 text_darkless pb-5" style="font-size: 150px;">/&#62; </div>
         </div>
     </section>
+    <!-- /#jumbotron -->
 </template>
 
 <style lang="scss" scoped>
