@@ -1,5 +1,11 @@
 @use "./variables" as *;
 
+.center_hv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .text_impact {
   font-family: "Skratch Punk", sans-serif;
   transform: rotate(-2deg);
