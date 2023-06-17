@@ -2,20 +2,20 @@
 import SiteHeader from "./components/SiteHeader.vue";
 import SiteMain from "./components/SiteMain.vue";
 import SiteFooter from "./components/SiteFooter.vue";
-import LinesItem from "./components/item/LinesItem.vue";
+import AnimatedLines from "./components/item/AnimatedLines.vue";
 export default {
   components: {
     SiteHeader,
     SiteMain,
     SiteFooter,
-    LinesItem,
+    AnimatedLines,
   },
 }
 </script>
 
 <template>
   <SiteHeader></SiteHeader>
-  <LinesItem></LinesItem>
+  <AnimatedLines></AnimatedLines>
   <router-view></router-view>
   <SiteFooter></SiteFooter>
 </template>
