@@ -1,27 +1,29 @@
 [
   {
     "path": "./src/assets/image/home/top_full_stack.png",
-    "title": "Web Developer \n Full-Stack",
-    "text": "I miei progetti coprono sia il front-end, l'aspetto visibile e interattivo, che il back-end, ciò che lavora dietro le quinte per mostrare e gestire i dati. Per esaminare il codice completo dei miei lavori, visita il mio profilo GitHub."
+    "title": "Web Developer Full-Stack",
+    "text1": "I miei progetti coprono sia il front-end, l'aspetto visibile e interattivo, che il back-end, ciò che lavora dietro le quinte per mostrare e gestire i dati. Per esaminare il codice completo dei miei lavori, visita il mio profilo GitHub.",
+    "text2": "",
+    "text3": "",
+    "button": "Go to GitHub",
+    "link": "https://github.com/cyberfolk"
   },
   {
-    "path": "./src/assets/image/home/top_full_stack.png",
-    "title": "2Web Developer Full-Stack",
-    "text": "I miei progetti coprono sia il front-end, l'aspetto visibile e interattivo, che il back-end, ciò che lavora dietro le quinte per mostrare e gestire i dati. Per esaminare il codice completo dei miei lavori, visita il mio profilo GitHub."
+    "path": "./src/assets/image/home/responsive.png",
+    "title": "Progetti Responsive",
+    "text1": "Creare un sito web o un'applicazione che si adatti a dispositivi diversi è essenziale per rimanere al passo con la tecnologia e mantenere la competitività,",
+    "text2": "Sfruttando una varietà di strumenti e tecnologie, ho sviluppato numerosi progetti responsivi che mantengono funzionalità solide e rispettano un'estetica coerente, indipendentemente dal formato di visualizzazione.",
+    "text3": "Questo garantisce agli utenti un'esperienza versatile e completa.",
+    "button": "Go to my Project",
+    "link": "Go to my Project"
   },
   {
-    "path": "./src/assets/image/home/top_full_stack.png",
-    "title": "3Web Developer Full-Stack",
-    "text": "I miei progetti coprono sia il front-end, l'aspetto visibile e interattivo, che il back-end, ciò che lavora dietro le quinte per mostrare e gestire i dati. Per esaminare il codice completo dei miei lavori, visita il mio profilo GitHub."
-  },
-  {
-    "path": "./src/assets/image/home/top_full_stack.png",
-    "title": "4Web Developer Full-Stack",
-    "text": "I miei progetti coprono sia il front-end, l'aspetto visibile e interattivo, che il back-end, ciò che lavora dietro le quinte per mostrare e gestire i dati. Per esaminare il codice completo dei miei lavori, visita il mio profilo GitHub."
-  },
-  {
-    "path": "./src/assets/image/home/lego-stack.png",
-    "title": "5Web Developer Full-Stack",
-    "text": "I miei progetti coprono sia il front-end, l'aspetto visibile e interattivo, che il back-end, ciò che lavora dietro le quinte per mostrare e gestire i dati. Per esaminare il codice completo dei miei lavori, visita il mio profilo GitHub."
+    "path": "./src/assets/image/home/language.png",
+    "title": "Tanti linguaggi",
+    "text1": "Durante il mio percorso formativo, ho ampliato le mie competenze in vari linguaggi utilizzati nello sviluppo web front-end e back-end.",
+    "text2": "Mi affascinano entrambi gli aspetti di questo mondo, che, seppur differenti, si integrano e influenzano reciprocamente.",
+    "text3": "Questa curiosità mi spinge costantemente ad approfondire nuovi linguaggi di programmazione. Clicca sul link per scoprire ulteriori dettagli su di me.",
+    "button": "More about me",
+    "link": "More about me"
   }
 ]
