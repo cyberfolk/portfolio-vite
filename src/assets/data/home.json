@@ -1,17 +1,27 @@
 [
   {
-    "path": "./src/assets/img/section/testimonials/01.png",
-    "name": "Cynthia Clark",
-    "text": "Lorem dolor sit amet, adipisicing elit. Est provident, officiis voluptatum consectetur reprehenderit aliquam voluptate beatae porro qui adipisci provident.!"
+    "path": "./src/assets/image/home/top_full_stack.png",
+    "title": "Web Developer \n Full-Stack",
+    "text": "I miei progetti coprono sia il front-end, l'aspetto visibile e interattivo, che il back-end, ciò che lavora dietro le quinte per mostrare e gestire i dati. Per esaminare il codice completo dei miei lavori, visita il mio profilo GitHub."
   },
   {
-    "path": "./src/assets/img/section/testimonials/02.png",
-    "name": "Amanda Leer",
-    "text": "Lorem distinctio dolor sit consectetur amet, reprehenderit adipisicing adipisci elit. Est, voluptatum distinctio reprehenderit aliquam voluptate beatae porro adipisc!"
+    "path": "./src/assets/image/home/top_full_stack.png",
+    "title": "2Web Developer Full-Stack",
+    "text": "I miei progetti coprono sia il front-end, l'aspetto visibile e interattivo, che il back-end, ciò che lavora dietro le quinte per mostrare e gestire i dati. Per esaminare il codice completo dei miei lavori, visita il mio profilo GitHub."
   },
   {
-    "path": "./src/assets/img/section/testimonials/03.png",
-    "name": "Rob Stark",
-    "text": "Lorem ipsum dolor sit amet, qui consectetur adipisicing elit. Est, ipsum officiis officiis voluptatum distinctio aliquam voluptate beatae porro ipsum qui provident.!"
+    "path": "./src/assets/image/home/top_full_stack.png",
+    "title": "3Web Developer Full-Stack",
+    "text": "I miei progetti coprono sia il front-end, l'aspetto visibile e interattivo, che il back-end, ciò che lavora dietro le quinte per mostrare e gestire i dati. Per esaminare il codice completo dei miei lavori, visita il mio profilo GitHub."
+  },
+  {
+    "path": "./src/assets/image/home/top_full_stack.png",
+    "title": "4Web Developer Full-Stack",
+    "text": "I miei progetti coprono sia il front-end, l'aspetto visibile e interattivo, che il back-end, ciò che lavora dietro le quinte per mostrare e gestire i dati. Per esaminare il codice completo dei miei lavori, visita il mio profilo GitHub."
+  },
+  {
+    "path": "./src/assets/image/home/lego-stack.png",
+    "title": "5Web Developer Full-Stack",
+    "text": "I miei progetti coprono sia il front-end, l'aspetto visibile e interattivo, che il back-end, ciò che lavora dietro le quinte per mostrare e gestire i dati. Per esaminare il codice completo dei miei lavori, visita il mio profilo GitHub."
   }
 ]

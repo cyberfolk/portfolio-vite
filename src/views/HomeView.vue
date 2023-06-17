@@ -1,9 +1,10 @@
 <script>
 import home from "./../assets/data/home.json";
 import JumbotroSection from "./../components/section/JumbotronSection.vue";
+import SiteMain from "./../components/SiteMain.vue";
 export default {
     name: "HomeView",
-    components: { JumbotroSection },
+    components: { JumbotroSection, SiteMain, },
     data() {
         return {
             activeImage: 0,
@@ -37,19 +38,34 @@ export default {
 
 <template>
     <JumbotroSection></JumbotroSection>
-    <section id="home_view">
-        <div id="slider" class="d-flex">
-            <button class="ms_arrow" style="width: 10%;" @click="prev()">&lsaquo;</button>
-            <div class=" text-center" style="width: 80%;" @mouseover="stop()" @mouseleave="play()">
-                <h5 class=" m-4">{{ home[activeImage].name }}</h5>
-                <p class="pb-4">{{ home[activeImage].text }}</p>
+    <SiteMain>
+        <div id="slider" class="d-flex ">
+            <button class="ms_arrow start-0" @click="prev()">&lsaquo;</button>
+            <button class="ms_arrow end-0" @click="next()">&rsaquo;</button>
+            <div @mouseover="stop()" @mouseleave="play()">
+                <div class="row g-5">
+                    <div class="col-6 px-2">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body">
+                                <h1 class="text-white fs-1 mx-0">{{ home[activeImage].title }}</h1>
+                                <p class="card-text fs-3">{{ home[activeImage].text }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col-6 -->
+                    <div class="col-6">
+                        <div class="card bg-transparent border-0">
+                            <img class="card-img-top" :src="home[activeImage].path" alt="">
+                        </div>
+                    </div>
+                    <!-- /.col-6 -->
+                </div>
+                <!-- /.row -->
             </div>
             <!-- /.content -->
-            <button class="ms_arrow" style="width: 10%;" @click="next()">&rsaquo;</button>
         </div>
         <!-- /.slider -->
-    </section>
-    <!-- /#home_view -->
+    </SiteMain>
 </template>
 
 <style lang="scss" scoped>
