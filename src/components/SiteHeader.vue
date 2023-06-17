@@ -36,6 +36,10 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/scss/partials/variables' as *;
 
+nav {
+  z-index: 1; //Set just to make the fa-xmark-circle go above the navigation bar
+}
+
 .nav-link:hover {
   color: $primary !important;
 }
