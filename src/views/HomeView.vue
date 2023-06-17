@@ -39,16 +39,19 @@ export default {
 <template>
     <JumbotroSection></JumbotroSection>
     <SiteMain>
-        <div id="slider" class="d-flex ">
-            <button class="ms_arrow start-0" @click="prev()">&lsaquo;</button>
-            <button class="ms_arrow end-0" @click="next()">&rsaquo;</button>
+        <div id="slider" class="d-flex">
+            <button class="ms_arrow start-0 top-50" @click="prev()">&lsaquo;</button>
+            <button class="ms_arrow end-0 top-50" @click="next()">&rsaquo;</button>
             <div @mouseover="stop()" @mouseleave="play()">
                 <div class="row g-5">
                     <div class="col-6 px-2">
                         <div class="card bg-transparent border-0">
                             <div class="card-body">
-                                <h1 class="text-white fs-1 mx-0">{{ home[activeImage].title }}</h1>
-                                <p class="card-text fs-3">{{ home[activeImage].text }}</p>
+                                <h1 class="text-white fs-1 mb-4">{{ home[activeImage].title }}</h1>
+                                <p class="card-text fs-3 mb-3">{{ home[activeImage].text1 }}</p>
+                                <p class="card-text fs-3 mb-3">{{ home[activeImage].text2 }}</p>
+                                <p class="card-text fs-3 mb-4">{{ home[activeImage].text3 }}</p>
+                                <router-link class="btn btn-primary text-white w-50 fs-4" :to="{ 'name': 'projects' }">{{ home[activeImage].button }}</router-link>
                             </div>
                         </div>
                     </div>
