@@ -36,7 +36,7 @@ export default {
 </script>
 
 <template>
-    <JumbotroSection :page="'home'"></JumbotroSection>
+    <JumbotroSection></JumbotroSection>
     <section id="home_view">
         <div id="slider" class="d-flex">
             <button class="ms_arrow" style="width: 10%;" @click="prev()">&lsaquo;</button>

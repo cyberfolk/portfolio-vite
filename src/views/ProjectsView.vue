@@ -12,11 +12,10 @@ export default {
 </script>
 
 <template>
-    <JumbotroSection :page="'projects'"></JumbotroSection>
+    <JumbotroSection></JumbotroSection>
     <section id="project_view">
         <div class="container my-5">
-            <h1 class="my-5 text_impact
-">Projects</h1>
+            <h1 class="my-5 text_impact">Projects</h1>
             <ProjectsList />
         </div>
         <!-- /.container -->

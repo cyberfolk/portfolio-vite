@@ -5,6 +5,13 @@ import ContactsView from "./views/ContactsView.vue"
 import SingleProject from "./views/SingleProject.vue"
 import NotFound from "./views/NotFound.vue";
 import ProjectsView from "./views/ProjectsView.vue";
+
+/**
+ * !  WARNING
+ * If you change the route name you have to change the related field 
+ * in this file: vite-boolfolio/src/assets/data/jumbotron.json
+ */
+
 const router = createRouter({
     history: createWebHistory(),
     linkExactActiveClass: "active",

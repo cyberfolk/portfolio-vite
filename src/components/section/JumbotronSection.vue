@@ -1,15 +1,12 @@
 <script>
-import jumbotron from "./../../assets/data/jumbotron.json";
+import data from "./../../assets/data/jumbotron.json";
 export default {
     name: "JumbotronSection",
     components: {},
     data() {
         return {
-            jumbotron: jumbotron,
+            data_view: data[this.$route.name],
         };
-    },
-    props: {
-        page: String,
     },
 };
 </script>
@@ -19,9 +16,8 @@ export default {
         <div class="d-flex justify-content-center align-items-center lh-1 font-monospace pt-3">
             <div class="rotate_2 text_darkless" style="font-size: 150px;">&#60; </div>
             <div>
-                <h1 class="rotate_2"> <span class='f_skratch text_darkless'> {{ jumbotron[this.page].dark1 }} </span> {{ jumbotron[this.page].light1 }} </h1>
-                <h1 class="rotate_2"> {{ jumbotron[this.page].light2 }} <span class='f_skratch text_darkless'> {{ jumbotron[this.page].dark2 }} </span>
-                </h1>
+                <h1 class="rotate_2"> <span class='f_skratch text_darkless'> {{ data_view.dark1 }} </span> {{ data_view.light1 }} </h1>
+                <h1 class="rotate_2"> {{ data_view.light2 }} <span class='f_skratch text_darkless'> {{ data_view.dark2 }} </span> </h1>
             </div>
             <div class="rotate_2 text_darkless pb-5" style="font-size: 150px;">/&#62; </div>
         </div>
