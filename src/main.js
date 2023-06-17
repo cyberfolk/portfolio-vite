@@ -9,8 +9,9 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import { faXmarkCircle, faCircleXmark } from '@fortawesome/free-regular-svg-icons'
 import { faTelegram, faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faUserSecret, faGithubAlt, faTelegram)
+library.add(faUserSecret, faGithubAlt, faTelegram, faXmarkCircle, faCircleXmark)
 
 createApp(App).use(router).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
