@@ -10,8 +10,9 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { faXmarkCircle, faCircleXmark } from '@fortawesome/free-regular-svg-icons'
-import { faTelegram, faGithubAlt } from '@fortawesome/free-brands-svg-icons'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
+import { faTelegram, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faUserSecret, faGithubAlt, faTelegram, faXmarkCircle, faCircleXmark)
+library.add(faUserSecret, faGithub, faLinkedinIn, faTelegram, faXmarkCircle, faCircleXmark, faHeart)
 
 createApp(App).use(router).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
