@@ -1,11 +1,13 @@
 <script>
 import JumbotroSection from "./../components/section/JumbotronSection.vue";
+import SiteMain from "./../components/SiteMain.vue";
 import ProjectsList from "./../components/section/ProjectsList.vue";
 export default {
     name: "ProjectView",
     components: {
         ProjectsList,
         JumbotroSection,
+        SiteMain,
     }
 };
 
@@ -13,14 +15,9 @@ export default {
 
 <template>
     <JumbotroSection></JumbotroSection>
-    <section id="project_view">
-        <div class="container my-5">
-            <h1 class="my-5 text_impact">Projects</h1>
-            <ProjectsList />
-        </div>
-        <!-- /.container -->
-    </section>
-    <!-- /#project_view -->
+    <SiteMain>
+        <ProjectsList />
+    </SiteMain>
 </template>
 
 <style lang="scss" scoped>

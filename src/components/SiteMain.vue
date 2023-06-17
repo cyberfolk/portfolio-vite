@@ -6,7 +6,13 @@ export default {
 </script>
 
 <template>
-  <main id="app_main" class="m-5"></main>
+  <main id="app_main" class="m-5">
+    <div class="container my-5">
+      <h1 class="my-5 text_impact">{{ this.$route.name }}</h1>
+      <slot></slot>
+    </div>
+    <!-- /.container -->
+  </main>
   <!-- /#app_main -->
 </template>
 

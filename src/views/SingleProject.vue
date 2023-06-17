@@ -1,8 +1,12 @@
 
 <script>
 import { state } from "../state";
+import SiteMain from "./../components/SiteMain.vue";
 export default {
     name: "SingleProject",
+    components: {
+        SiteMain,
+    },
     data() {
         return { state, };
     },
@@ -13,41 +17,36 @@ export default {
 </script>
 
 <template>
-    <section id="view_single_project">
-        <div class="container my-5" v-if="state.project">
-            <h1 class="my-5 f_skratch">Project</h1>
-            <h1 class="align-self-center">{{ $route.params.slug }}</h1>
-            <div class="row g-5">
-                <div class="col-6">
-                    <div class="card">
-                        <div v-if="state.project" class="card">
-                            <img class="card-img-top" :src="state.completePath(state.project)" alt="Card image cap" />
-                            <div class="card-body">
-                                <h2 class="mb-2">Repo: {{ state.project.link_code }}</h2>
-                                <h3 class="mb-2">Date: {{ state.project.start_date }}</h3>
-                                <h4 class="mb-2">
-                                    Type:
-                                    <div v-if="state.project.type" class="badge">{{ state.project.type.name }}</div>
-                                    <div v-else>N/A</div>
-                                </h4>
-                                <div v-if="state.project.technologies" class="d-flex align-items-center mb-2">
-                                    <h4>Technologies:</h4>
-                                    <ul v-for="technology in state.project.technologies">
-                                        <li class="badge"> {{ technology.name }} </li>
-                                    </ul>
-                                </div>
+    <SiteMain>
+        <!-- <h1 class="align-self-center">{{ $route.params.slug }}</h1> -->
+        <div v-if="state.project" class="row g-5">
+            <div class="col-6">
+                <div class="card">
+                    <div v-if="state.project" class="card">
+                        <img class="card-img-top" :src="state.completePath(state.project)" alt="Card image cap" />
+                        <div class="card-body">
+                            <h2 class="mb-2">Repo: {{ state.project.link_code }}</h2>
+                            <h3 class="mb-2">Date: {{ state.project.start_date }}</h3>
+                            <h4 class="mb-2">
+                                Type:
+                                <div v-if="state.project.type" class="badge">{{ state.project.type.name }}</div>
+                                <div v-else>N/A</div>
+                            </h4>
+                            <div v-if="state.project.technologies" class="d-flex align-items-center mb-2">
+                                <h4>Technologies:</h4>
+                                <ul v-for="technology in state.project.technologies">
+                                    <li class="badge"> {{ technology.name }} </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="card"></div>
-                </div>
+            </div>
+            <div class="col-6">
+                <div class="card"></div>
             </div>
         </div>
-        <!-- /.container -->
-    </section>
-    <!-- /#view_single_project -->
+    </SiteMain>
 </template> 
 
 <style lang="scss" scoped>
