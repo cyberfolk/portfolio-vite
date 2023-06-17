@@ -1,26 +1,32 @@
 <script>
 export default {
   name: "SiteFooter",
-  components: {},
 };
 </script>
 
 <template>
-  <footer id="app_footer" class="p-5 py-3 bg-dark fixed-bottom">
+  <footer id="app_footer" class="px-5 py-3 bg-dark px-0">
+    <div class="container social pt-5 pb-2">
+
+      <h3 class="text-center text_impact">Seguimi su...</h3>
+      <div class="text-center py-4 d-flex justify-content-center gap-5">
+        <a href="https://www.linkedin.com" target="_blank" role="button" class="square center_hv">
+          <font-awesome-icon icon="fa-brands fa-linkedin-in" size="2x" />
+        </a>
+        <a href="https://github.com/cyberfolk" target="_blank" role="button" class="square center_hv">
+          <font-awesome-icon icon="fa-brands fa-github" size="2x" />
+        </a>
+      </div>
+
+      <p class="text-center fs-4">Per conoscermi meglio segui i miei profili Linkedin e GitHub.</p>
+    </div>
+    <hr>
+
     <div class="d-flex flex-wrap justify-content-between align-items-center">
       <div> Andrea Ferrari | Boolean 2023 | &copy; powered by cyberfolk</div>
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex align-content-center gap-4">
-        <li>
-          <a href="https://t.me/Remigio377">
-            <font-awesome-icon icon="fa-brands fa-telegram" size="lg" />
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/cyberfolk">
-            <font-awesome-icon icon="fa-brands fa-github-alt" size="xl" />
-          </a>
-        </li>
-      </ul>
+      <a class="text-decoration-none" href="https://www.youtube.com/watch?v=ZZ5LpwO-An4">
+        <font-awesome-icon icon="fa-solid fa-heart" beat size="2x" />
+      </a>
     </div>
 
   </footer>
@@ -30,11 +36,18 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/scss/partials/variables' as *;
 
-.a:hover {
-  color: $primary !important;
+footer {
+  box-shadow: -4px 20px 20px 0px rgba(255, 255, 255, 0.1) inset;
 }
 
-.a {
-  font-size: larger;
+.square {
+  padding: 0.6rem;
+  border-radius: 30%;
+  box-shadow: -1px 1px 2px 1px #fff;
+
+  &:hover {
+    box-shadow: -2px 2px 4px 0px #fff;
+    transform: scale(99%);
+  }
 }
 </style>
