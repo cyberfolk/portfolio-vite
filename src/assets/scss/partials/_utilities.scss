@@ -20,21 +20,13 @@
   transform: rotate(-2deg);
 }
 
-.bg_darkless {
-  background: $darkless !important;
-}
-.text_darkless {
-  color: $darkless !important;
-}
-
 .my_shadow {
   box-shadow: 0 0.5rem 1rem rgba(white, 0.3);
 }
 
-.ms_arrow {
+.my_arrow {
   background: transparent;
   border: none;
   font-size: 100px;
-  position: absolute;
-  width: 20vh;
+  width: 10%;
 }

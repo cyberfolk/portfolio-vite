@@ -1,19 +1,7 @@
-/* Var-Color Palette - from Bootstrap */
-$dark: #07031f;
-$light: #fafafa;
-$primary: #f739b1;
-/* $secondary:   # ; */
-/* $accenture: # ; */
-/* $success:   # ; */
-/* $danger:    # ; */
-/* $warning:   # ; */
-/* $info:      # ; */
-/* $muted:     # ; */
-$white: white;
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
 
-/* Var-Color Palette - Personal */
-$darkless: #0f0649;
-/* $lightless: # ; */
-/* $lighter:   # ; */
+@import "./variables/color";
+@import "./variables/spacer";
 
 $enable-negative-margins: true;
