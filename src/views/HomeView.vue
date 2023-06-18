@@ -38,37 +38,34 @@ export default {
 
 <template>
     <JumbotroSection></JumbotroSection>
-    <SiteMain>
-        <div id="slider" class="d-flex">
-            <button class="ms_arrow start-0 top-50" @click="prev()">&lsaquo;</button>
-            <button class="ms_arrow end-0 top-50" @click="next()">&rsaquo;</button>
-            <div @mouseover="stop()" @mouseleave="play()">
-                <div class="row g-5">
-                    <div class="col-6 px-2">
-                        <div class="card bg-transparent border-0">
-                            <div class="card-body">
-                                <h1 class="text-white fs-1 mb-4">{{ home[activeImage].title }}</h1>
-                                <p class="card-text fs-3 mb-3">{{ home[activeImage].text1 }}</p>
-                                <p class="card-text fs-3 mb-3">{{ home[activeImage].text2 }}</p>
-                                <p class="card-text fs-3 mb-4">{{ home[activeImage].text3 }}</p>
-                                <router-link class="btn btn-primary text-white w-50 fs-4" :to="{ 'name': 'projects' }">{{ home[activeImage].button }}</router-link>
-                            </div>
-                        </div>
+    <div id="slider" class="d-flex">
+        <button class="my_arrow start-0 top-50" @click="prev()">&lsaquo;</button>
+        <div @mouseover="stop()" @mouseleave="play()" style="width: 80%; height: 100vh; ">
+            <h1 class="my-5 text_impact">{{ this.$route.name }}</h1>
+            <h1 class="text-white fs-1 mb-4">{{ home[activeImage].title }}</h1>
+            <div class="row g-5">
+                <div class="col-12 col-lg-6 order-lg-2">
+                    <div class="my_card">
+                        <img class="img-fluid" :src="home[activeImage].path" alt="">
                     </div>
-                    <!-- /.col-6 -->
-                    <div class="col-6">
-                        <div class="card bg-transparent border-0">
-                            <img class="card-img-top" :src="home[activeImage].path" alt="">
-                        </div>
-                    </div>
-                    <!-- /.col-6 -->
                 </div>
-                <!-- /.row -->
+                <!-- /.col-6 -->
+                <div class="col-12 col-lg-6 order-lg-1">
+                    <div class="my_card">
+                        <p class="fs-3 mb-3">{{ home[activeImage].text1 }}</p>
+                        <p class="fs-3 mb-3">{{ home[activeImage].text2 }}</p>
+                        <p class="fs-3 mb-4">{{ home[activeImage].text3 }}</p>
+                        <router-link class="btn btn-primary text-white w-50 fs-4" :to="{ 'name': 'projects' }">{{ home[activeImage].button }}</router-link>
+                    </div>
+                </div>
+                <!-- /.col-6 -->
             </div>
-            <!-- /.content -->
+            <!-- /.row -->
         </div>
-        <!-- /.slider -->
-    </SiteMain>
+        <!-- /.content -->
+        <button class="my_arrow end-0 top-50" @click="next()">&rsaquo;</button>
+    </div>
+    <!-- /.slider -->
 </template>
 
 <style lang="scss" scoped>
