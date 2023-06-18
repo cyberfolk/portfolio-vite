@@ -1,6 +1,7 @@
 import App from './App.vue'
 import './assets/scss/app.scss'
 import '@fortawesome/fontawesome-free/css/all.css'
+import 'bootstrap'
 
 import { createApp } from 'vue'
 import { router } from './router.js'
