@@ -6,8 +6,7 @@ export default {
 
 <template>
   <header id="app_header">
-
-    <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark shadow px-5">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow px-5">
       <a class="navbar-brand" href="{{ url('/') }}">
         <img height="35" src="./../assets/image/cyberfolk-logo.png" alt="Personal Logo" class="pt-1">
       </a>
@@ -43,30 +42,32 @@ export default {
 @use '../assets/scss/partials/variables' as *;
 @use '../assets/scss/partials/utilities' as *;
 
-nav {
-  z-index: 1; //Set just to make the fa-xmark-circle go above the navigation bar
+.nav-item {
+  text-align: center;
 
-  .nav-item {
-    text-align: center;
+  .nav-link {
+    font-size: larger;
+  }
 
-    .nav-link:hover {
-      color: $primary !important;
+  .nav-link:hover {
+    color: $primary !important;
+  }
+
+  .active {
+    @extend .text_impact;
+    font-size: larger;
+    animation: activate 0.05s linear;
+  }
+
+  @keyframes activate {
+    0% {
+      rotate: deg(0);
+      font-size: medium;
     }
 
-    .active {
-      @extend .text_impact;
+    100% {
+      rotate: deg(-2);
       font-size: larger;
-      animation: activate 0.05s linear;
-    }
-
-    @keyframes activate {
-      0% {
-        font-size: medium;
-      }
-
-      100% {
-        font-size: larger;
-      }
     }
   }
 }
