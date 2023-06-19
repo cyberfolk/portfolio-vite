@@ -8,12 +8,12 @@ export default {
   <footer id="app_footer" class="px-5 py-3 bg-dark px-0">
     <div class="container social pt-5 pb-2">
 
-      <h3 class="text-center text_impact">Seguimi su...</h3>
+      <h3 class="text-center ms-text-impact">Seguimi su...</h3>
       <div class="text-center py-4 d-flex justify-content-center gap-5">
-        <a href="https://www.linkedin.com" target="_blank" role="button" class="square center_hv">
+        <a href="https://www.linkedin.com" target="_blank" role="button" class="square ms-center-hv">
           <font-awesome-icon icon="fa-brands fa-linkedin-in" size="2x" />
         </a>
-        <a href="https://github.com/cyberfolk" target="_blank" role="button" class="square center_hv">
+        <a href="https://github.com/cyberfolk" target="_blank" role="button" class="square ms-center-hv">
           <font-awesome-icon icon="fa-brands fa-github" size="2x" />
         </a>
       </div>

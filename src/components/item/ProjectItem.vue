@@ -22,7 +22,7 @@ export default {
 };
 </script>
 <template>
-    <div class="card position-relative border-0 my_shadow">
+    <div class="card position-relative border-0 ms-shadow-white">
         <img v-if="cover" :src="cover" class="card-img" :alt="title" />
         <div v-if="type" class="badge position-absolute top-0 end-0 mt-2 me-2" :class="getBG(type.name)">{{ type.name }}</div>
         <h3 class="card-title position-absolute text-center w-100 mt-4">{{ title }}</h3>

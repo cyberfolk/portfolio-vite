@@ -54,7 +54,7 @@ export default {
   }
 
   .active {
-    @extend .text_impact;
+    @extend .ms-text-impact;
     font-size: larger;
     animation: activate 0.05s linear;
   }

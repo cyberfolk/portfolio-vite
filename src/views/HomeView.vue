@@ -39,9 +39,9 @@ export default {
 <template>
     <JumbotroSection></JumbotroSection>
     <div id="slider" class="d-flex mb-5">
-        <button class="my_arrow start-0 top-50" @click="prev()">&lsaquo;</button>
+        <button class="ms-arrow start-0 top-50" @click="prev()">&lsaquo;</button>
         <div class="container" @mouseover="stop()" @mouseleave="play()" style="width: 80%; min-height: 800px; ">
-            <h1 class="my-5 text_impact">{{ this.$route.name }}</h1>
+            <h1 class="my-5 ms-text-impact">{{ this.$route.name }}</h1>
             <h1 class="text-white fs-1 mb-4">{{ home[activeImage].title }}</h1>
             <div class="row g-5">
                 <div class="col-12 col-lg-6 order-lg-2 mt-lg-n6">
@@ -63,7 +63,7 @@ export default {
             <!-- /.row -->
         </div>
         <!-- /.content -->
-        <button class="my_arrow end-0 top-50" @click="next()">&rsaquo;</button>
+        <button class="ms-arrow end-0 top-50" @click="next()">&rsaquo;</button>
     </div>
     <!-- /.slider -->
 </template>

@@ -1,30 +1,30 @@
 @use "./variables" as *;
 
-.center_hv {
+.ms-center-hv {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.text_impact {
+.ms-text-impact {
   font-family: "Skratch Punk", sans-serif;
   transform: rotate(-2deg);
   color: $primary !important;
 }
 
-.f_skratch {
+.ms-ff-skratch {
   font-family: "Skratch Punk", sans-serif;
 }
 
-.rotate_2 {
+.ms-rotate-n2 {
   transform: rotate(-2deg);
 }
 
-.my_shadow {
+.ms-shadow-white {
   box-shadow: 0 0.5rem 1rem rgba(white, 0.3);
 }
 
-.my_arrow {
+.ms-arrow {
   background: transparent;
   border: none;
   font-size: 100px;
