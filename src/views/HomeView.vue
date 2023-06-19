@@ -40,13 +40,13 @@ export default {
     <JumbotroSection></JumbotroSection>
     <div id="slider" class="d-flex mb-5">
         <button class="my_arrow start-0 top-50" @click="prev()">&lsaquo;</button>
-        <div @mouseover="stop()" @mouseleave="play()" style="width: 80%; min-height: 800px; ">
+        <div class="container" @mouseover="stop()" @mouseleave="play()" style="width: 80%; min-height: 800px; ">
             <h1 class="my-5 text_impact">{{ this.$route.name }}</h1>
             <h1 class="text-white fs-1 mb-4">{{ home[activeImage].title }}</h1>
             <div class="row g-5">
                 <div class="col-12 col-lg-6 order-lg-2 mt-lg-n6">
                     <div class="my_card">
-                        <img class="img-fluid" :src="home[activeImage].path" alt="">
+                        <img class="w-100" :src="home[activeImage].path" alt="">
                     </div>
                 </div>
                 <!-- /.col-6 -->
