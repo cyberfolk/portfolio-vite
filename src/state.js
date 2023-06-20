@@ -27,7 +27,7 @@ export const state = reactive({
     },
 
     completePath(project) {
-        return this.API_URL_BASE + 'storage/' + project.link_cover
+        return this.API_URL_BASE + 'storage/' + project.image
     },
 
     getProject(endUrl) {

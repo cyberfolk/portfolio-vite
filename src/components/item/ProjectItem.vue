@@ -4,7 +4,7 @@ export default {
     props: {
         title: String,
         cover: String,
-        description: String,
+        info: String,
         type: Object,
         technologies: Array,
         slug: String,
@@ -31,7 +31,7 @@ export default {
                 <span v-for="t in technologies" class="badge bg-darkless me-1">{{ t.name }}</span>
             </div>
             <p class="card-text px-1 mt-1 d-none">
-                {{ description.slice(0, 150) + '...' }}
+                {{ info.slice(0, 150) + '...' }}
                 <router-link class="nav-link d-inline fw-bold badge bg-primary" :to="{ name: 'single-project', params: { slug: slug } }">Read More</router-link>
             </p>
         </div>

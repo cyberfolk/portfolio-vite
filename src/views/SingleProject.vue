@@ -25,8 +25,8 @@ export default {
                     <div v-if="state.project" class="card">
                         <img class="card-img-top" :src="state.completePath(state.project)" alt="Card image cap" />
                         <div class="card-body">
-                            <h2 class="mb-2">Repo: {{ state.project.link_code }}</h2>
-                            <h3 class="mb-2">Date: {{ state.project.start_date }}</h3>
+                            <h2 class="mb-2">Repo: {{ state.project.link }}</h2>
+                            <h3 class="mb-2">Date: {{ state.project.init }}</h3>
                             <h4 class="mb-2">
                                 Type:
                                 <div v-if="state.project.type" class="badge">{{ state.project.type.name }}</div>

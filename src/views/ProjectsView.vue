@@ -22,7 +22,7 @@ export default {
                     <ProjectItem
                         :title="p.title"
                         :cover="state.completePath(p)"
-                        :description="p.description"
+                        :info="p.info"
                         :type="p.type"
                         :technologies="p.technologies"
                         :slug="p.slug" />
