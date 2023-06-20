@@ -26,13 +26,13 @@ export default {
         <img v-if="cover" :src="cover" class="card-img" :alt="title" />
         <div v-if="type" class="badge position-absolute top-0 end-0 mt-2 me-2" :class="getBG(type.name)">{{ type.name }}</div>
         <h3 class="card-title position-absolute text-center w-100 mt-4">{{ title }}</h3>
-        <div class="card-body position-absolute bottom-0">
-            <div v-if="technologies">
-                <span v-for="t in technologies" class="badge bg_darkless me-1">{{ t.name }}</span>
+        <div class="card-body position-absolute bottom-0 w-100">
+            <div v-if="technologies" class="text-center">
+                <span v-for="t in technologies" class="badge bg-darkless me-1">{{ t.name }}</span>
             </div>
             <p class="card-text px-1 mt-1 d-none">
                 {{ description.slice(0, 150) + '...' }}
-                <router-link class="nav-link d-inline text-primary fw-bold" :to="{ name: 'single-project', params: { slug: slug } }">Read More</router-link>
+                <router-link class="nav-link d-inline fw-bold badge bg-primary" :to="{ name: 'single-project', params: { slug: slug } }">Read More</router-link>
             </p>
         </div>
         <!-- /.body -->
