@@ -1,6 +1,8 @@
 <script>
+import { state } from "./../../state";
 export default {
     name: "ProjectItem",
+    data() { return { state, }; },
     props: {
         title: String,
         cover: String,
@@ -9,31 +11,23 @@ export default {
         technologies: Array,
         slug: String,
     },
-    methods: {
-        getBG(type) {
-            switch (type) {
-                case 'full-stack': return 'bg-success';
-                case 'back-end': return 'bg-warning';
-                case 'front-end': return 'bg-danger';
-            }
-        }
-    }
-
 };
 </script>
 <template>
-    <div class="card position-relative border-0 ms-shadow-white">
-        <img v-if="cover" :src="cover" class="card-img" :alt="title" />
-        <div v-if="type" class="badge position-absolute top-0 end-0 mt-2 me-2" :class="getBG(type.name)">{{ type.name }}</div>
-        <h3 class="card-title position-absolute text-center w-100 mt-4">{{ title }}</h3>
+    <div class="card position-relative border-0 ms-shadow-white text-center">
+        <img v-if="cover" class="card-img ms-img-fit" :src="cover" :alt="title" />
+        <img v-if="type" width="50" class="type position-absolute top-0 end-0 mt-2 me-2"
+            :src="state.completePath(type)" :title="type.name">
+        <h3 class="title position-absolute w-100 mt-4">{{ title }}</h3>
         <div class="card-body position-absolute bottom-0 w-100">
-            <div v-if="technologies" class="text-center">
-                <span v-for="t in technologies" class="badge bg-darkless me-1">{{ t.name }}</span>
-            </div>
-            <p class="card-text px-1 mt-1 d-none">
-                {{ info?.slice(0, 150) + '...' }}
-                <router-link class="nav-link d-inline fw-bold badge bg-primary" :to="{ name: 'single-project', params: { slug: slug } }">Read More</router-link>
+            <p class="info mb-5"> {{ info?.slice(0, 150) + '...' }}
+                <router-link class="fw-bold badge bg-primary"
+                    :to="{ name: 'single-project', params: { slug: slug } }">Read More</router-link>
             </p>
+            <div v-if="technologies">
+                <img v-for="tech in  technologies" width="50" class="technology badge bg-darkless me-1"
+                    :src="state.completePath(tech)" :title="tech.name">
+            </div>
         </div>
         <!-- /.body -->
     </div>
@@ -47,16 +41,32 @@ export default {
     aspect-ratio: 1.33;
 
     .card-img {
-        height: 100%;
-        object-fit: cover;
+        transition: filter 1s;
     }
-}
 
-.card:hover .card-img {
-    filter: brightness(0.8);
-}
+    .info {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 1s, opacity 1s;
+    }
 
-.card:hover .card-text {
-    display: block !important;
+    .technology {
+        transition: width 1s;
+        display: inline; //otherwise badges with no content set their content as display none
+    }
+
+    &:hover .card-img {
+        filter: brightness(0.6);
+        transition: filter 1s;
+    }
+
+    &:hover .info {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &:hover .technology {
+        width: 40px;
+    }
 }
 </style>
