@@ -1,22 +1,35 @@
 <script>
 export default {
     name: "CyberButton",
-};
-
+    props: {
+        color: String
+    },
+    //The only way to pass props in pseudo-element-html
+    computed: {
+        cssProps() {
+            return {
+                '--color': this.color
+            }
+        }
+    }
+}
 </script>
 
 <template>
-    <div class="text-center">
-        <button class="cybr-btn"> Buttons<span aria-hidden>_</span>
-            <span aria-hidden class="cybr-btn__glitch">Buttons_</span>
-        </button>
-    </div>
+    <button :style="cssProps" class="cybr-btn">
+        <slot></slot>
+        <span>_</span>
+        <span class="cybr-glitch">
+            <slot></slot>_
+        </span>
+    </button>
 </template>
 
 <style lang="scss" scoped>
 @use '../../assets/scss/partials/variables' as *;
 
-$shimmy-distance: 15;
+$shimmy-distance: 15%;
+$shadow: $secondary;
 $border: 4px;
 $clip: polygon(0 0, 100% 0, 100% 100%, 8% 100%, 0 70%);
 $clip-one: polygon(0 2%, 100% 2%, 100% 95%, 8% 95%, 0 70%);
@@ -27,10 +40,6 @@ $clip-five: polygon(0 0, 100% 0, 100% 0, 8% 0, 0 0);
 $clip-six: polygon(0 40%, 100% 40%, 100% 85%, 8% 85%, 0 70%);
 $clip-seven: polygon(0 63%, 100% 63%, 100% 80%, 8% 80%, 0 70%);
 
-$primary: hsl(255, 85%, 50%);
-$shadow-primary: hsl(180, 90%, 50%);
-$shadow-secondary: hsl(180, 90%, 60%);
-$color: hsl(0, 0%, 100%);
 
 @font-face {
     font-family: Cyber;
@@ -40,29 +49,25 @@ $color: hsl(0, 0%, 100%);
 
 .cybr-btn {
     font-family: 'Cyber', sans-serif;
-    color: $color;
     cursor: pointer;
     background: transparent;
     text-transform: uppercase;
-    font-size: 26px;
     outline: transparent;
     letter-spacing: 2px;
     position: relative;
     font-weight: 700;
     border: 0;
-    min-width: 300px;
-    height: 75px;
-    line-height: 75px;
     transition: background 2s;
+    color: $white;
+    text-decoration: none;
 }
 
 .cybr-btn:hover {
-
-    --primary: hsl(255, 85%, 40%);
+    filter: brightness(90%);
 }
 
 .cybr-btn:active {
-    --primary: hsl(255, 85%, 30%);
+    filter: brightness(70%);
 }
 
 .cybr-btn:after,
@@ -78,32 +83,37 @@ $color: hsl(0, 0%, 100%);
 }
 
 .cybr-btn:before {
-    background: $shadow-primary;
+    background: $shadow;
     transform: translate($border, 0);
 }
 
 .cybr-btn:after {
-    background: $primary;
+    background: var(--color);
 }
 
-.cybr-btn__glitch {
+.cybr-glitch {
     position: absolute;
     top: $border * -1;
     left: $border * -1;
     right: $border * -1;
     bottom: $border * -1;
-    background: $shadow-primary;
-    text-shadow: 2px 2px $shadow-primary, -2px -2px $shadow-secondary;
+    background: $shadow;
+    text-shadow: 2px 2px $shadow, -2px -2px $shadow;
     clip-path: $clip;
     animation: glitch 2s infinite;
     display: none;
+    line-height: 16px;
+    color: $white;
+    text-decoration: none;
+
+
 }
 
-.cybr-btn:hover .cybr-btn__glitch {
+.cybr-btn:hover .cybr-glitch {
     display: block;
 }
 
-.cybr-btn__glitch:before {
+.cybr-glitch:before {
     content: '';
     position: absolute;
     top: $border * 1;
@@ -111,7 +121,7 @@ $color: hsl(0, 0%, 100%);
     bottom: $border * 1;
     left: $border * 1;
     clip-path: $clip;
-    background: $primary;
+    background: var(--color);
     z-index: -1;
 }
 
@@ -128,7 +138,7 @@ $color: hsl(0, 0%, 100%);
 
     6% {
         clip-path: $clip-two;
-        transform: translate($shimmy-distance * 1%, 0);
+        transform: translate($shimmy-distance * 1, 0);
     }
 
     9% {
@@ -138,7 +148,7 @@ $color: hsl(0, 0%, 100%);
 
     10% {
         clip-path: $clip-three;
-        transform: translate($shimmy-distance * 1%, 0);
+        transform: translate($shimmy-distance * 1, 0);
     }
 
     13% {
@@ -149,12 +159,12 @@ $color: hsl(0, 0%, 100%);
     14%,
     21% {
         clip-path: $clip-four;
-        transform: translate($shimmy-distance * 1%, 0);
+        transform: translate($shimmy-distance * 1, 0);
     }
 
     25% {
         clip-path: $clip-five;
-        transform: translate($shimmy-distance * 1%, 0);
+        transform: translate($shimmy-distance * 1, 0);
     }
 
     30% {
@@ -170,7 +180,7 @@ $color: hsl(0, 0%, 100%);
 
     40% {
         clip-path: $clip-six;
-        transform: translate($shimmy-distance * 1%);
+        transform: translate($shimmy-distance * 1);
     }
 
     50% {
@@ -180,7 +190,7 @@ $color: hsl(0, 0%, 100%);
 
     55% {
         clip-path: $clip-seven;
-        transform: translate($shimmy-distance * 1%, 0);
+        transform: translate($shimmy-distance * 1, 0);
     }
 
     60% {

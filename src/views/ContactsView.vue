@@ -1,4 +1,5 @@
 <script>
+import CyberButton from "./../components/item/CyberButton.vue";
 import axios from 'axios';
 import { state } from '../state';
 import JumbotroSection from "./../components/section/JumbotronSection.vue";
@@ -8,6 +9,7 @@ export default {
     components: {
         JumbotroSection,
         SiteMain,
+        CyberButton
     },
     data() {
         return {
@@ -87,8 +89,10 @@ export default {
                     class="form-control rounded" :class="{ 'is-invalid': errors.message }"></textarea>
                 <p v-for="(error, index) in errors.message" :key="`message-error-${index}`" class="invalid-feedback"> {{ error }} </p>
             </div>
-            <button button type=" submit" class="btn btn-primary text-white me-2" :disabled="loading">{{ loading ? 'Sending...' : 'Send' }}</button>
-            <button type="reset" class="btn btn-warning text-white" :disabled="loading">{{ loading ? 'Sending...' : 'Reset' }}</button>
+
+            <CyberButton class="py-2 px-5 me-4 fs-4" type="submit" :disabled="loading">{{ loading ? 'Sending...' : 'Send' }} </CyberButton>
+            <CyberButton class="py-2 px-5 fs-4" type="reset" :disabled="loading">{{ loading ? 'Sending...' : 'Reset' }} </CyberButton>
+
         </form>
     </SiteMain>
 </template>
