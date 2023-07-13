@@ -90,8 +90,8 @@ export default {
                 <p v-for="(error, index) in errors.message" :key="`message-error-${index}`" class="invalid-feedback"> {{ error }} </p>
             </div>
 
-            <CyberButton class="py-2 px-5 me-4 fs-4" type="submit" :disabled="loading">{{ loading ? 'Sending...' : 'Send' }} </CyberButton>
-            <CyberButton class="py-2 px-5 fs-4" type="reset" :disabled="loading">{{ loading ? 'Sending...' : 'Reset' }} </CyberButton>
+            <CyberButton class="py-2 px-5 me-4 fs-4" type="submit" :color="'#f739b1'" :disabled="loading">{{ loading ? 'Sending...' : 'Send' }} </CyberButton>
+            <CyberButton class="py-2 px-5 fs-4" type="reset" :color="'#ffc107'" :disabled="loading">{{ loading ? 'Sending...' : 'Reset' }} </CyberButton>
 
         </form>
     </SiteMain>

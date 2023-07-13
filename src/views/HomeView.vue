@@ -1,10 +1,11 @@
 <script>
+import CyberButton from "./../components/item/CyberButton.vue";
 import home from "./../assets/data/home.json";
 import JumbotroSection from "./../components/section/JumbotronSection.vue";
 import SiteMain from "./../components/SiteMain.vue";
 export default {
     name: "HomeView",
-    components: { JumbotroSection, SiteMain, },
+    components: { JumbotroSection, SiteMain, CyberButton },
     data() {
         return {
             activeImage: 0,
@@ -55,7 +56,10 @@ export default {
                         <p class="fs-3 mb-3">{{ home[activeImage].text1 }}</p>
                         <p class="fs-3 mb-3">{{ home[activeImage].text2 }}</p>
                         <p class="fs-3 mb-4">{{ home[activeImage].text3 }}</p>
-                        <router-link class="btn btn-primary text-white w-50 fs-4" :to="{ 'name': 'projects' }">{{ home[activeImage].button }}</router-link>
+                        <CyberButton class="py-2 px-5 me-4 fs-4" :color="'#f739b1'">
+                            <a :href="home[activeImage].link">{{ home[activeImage].button }}</a>
+                        </CyberButton>
+
                     </div>
                 </div>
                 <!-- /.col-6 -->

@@ -15,7 +15,7 @@
     "text2": "Sfruttando una varietà di strumenti e tecnologie, ho sviluppato numerosi progetti responsivi che mantengono funzionalità solide e rispettano un'estetica coerente, indipendentemente dal formato di visualizzazione.",
     "text3": "Questo garantisce agli utenti un'esperienza versatile e completa.",
     "button": "Go to my Project",
-    "link": "Go to my Project"
+    "link": "http://localhost:5176/projects"
   },
   {
     "path": "./src/assets/image/home/language.png",
@@ -24,6 +24,6 @@
     "text2": "Mi affascinano entrambi gli aspetti di questo mondo, che, seppur differenti, si integrano e influenzano reciprocamente.",
     "text3": "Questa curiosità mi spinge costantemente ad approfondire nuovi linguaggi di programmazione. Clicca sul link per scoprire ulteriori dettagli su di me.",
     "button": "More about me",
-    "link": "More about me"
+    "link": "http://localhost:5176/about"
   }
 ]

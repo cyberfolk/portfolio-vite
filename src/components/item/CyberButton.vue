@@ -176,16 +176,19 @@ $clip-seven: polygon(0 63%, 100% 63%, 100% 80%, 8% 80%, 0 70%);
     45% {
         clip-path: $clip-six;
         transform: translate($shimmy-distance * -1);
+        z-index: -1;
     }
 
     40% {
         clip-path: $clip-six;
         transform: translate($shimmy-distance * 1);
+        z-index: -1;
     }
 
     50% {
         clip-path: $clip-six;
         transform: translate(0, 0);
+        z-index: -1;
     }
 
     55% {
